@@ -12,7 +12,7 @@
 
 #define MAX_DRIVER_NAME_LENGTH_STR "30"
 
-typedef NTSTATUS(*ZwQuerySystemInformationType)(DWORD SystemInformationClass, PVOID SystemInformation, ULONG SystemInformationLength, PULONG ReturnLength);
+typedef NTSTATUS (WINAPI*ZwQuerySystemInformationType)(DWORD SystemInformationClass, PVOID SystemInformation, ULONG SystemInformationLength, PULONG ReturnLength);
 
 typedef struct _SYSTEM_MODULE_INFORMATION { // Information Class 11
 	PVOID Reserved[2];						// + 0x00

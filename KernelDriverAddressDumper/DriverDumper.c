@@ -61,7 +61,7 @@ BOOL PrintKernelModules()
 					printf("%-" MAX_DRIVER_NAME_LENGTH_STR "s\t%-16s\t%-16s\r\n", "-----------", "----", "----");
 					bPrintHeader = FALSE;
 				}
-				printf("%-" MAX_DRIVER_NAME_LENGTH_STR "s\t0x%016p\t0x%016x\r\n", lpTargetModName, curMod.Base, curMod.Size);
+				printf("%-0" MAX_DRIVER_NAME_LENGTH_STR "s\t0x%016x\t0x%016x\r\n", lpTargetModName, curMod.Base, curMod.Size);
 			}
 		}
 		VirtualFree(pSysAllModules, 0, MEM_RELEASE);
